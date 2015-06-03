@@ -1,10 +1,9 @@
 
   MTG (Multi-trait GREML and GBLUP program) 
-  version1.2
+  version1.3
   SH Lee (Jul/2014)
 
-  mtg1.2-f95    : compiled with gfortran
-  mtg1.2        : compiled with intel ifort (possible to parallel e.g. -thread k)
+  mtg1.3     : compiled with intel ifort (possible to parallel e.g. -thread k)
   rtmx_frq-vx: estimating mean(x) and var(x) (x is 0,1,2 SNP coefficient)
   snp_blup1.5: converting individual BLUP to SNP BLUP or the otherway around
 
@@ -13,7 +12,7 @@
 
   <2 traits model>
   -To get variance components (-out) and breeding values (-bv),
-  ./mtg1.2-f95 -p toy.fam -d toy.phen -g toy.rtmx -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1
+  ./mtg1.3 -p toy.fam -d toy.phen -g toy.rtmx -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1
 
   - To get SNP BLUP for the first trait,
   awk '$1==1 {print $2}' toy.2t.bv.py > tmp1
@@ -31,7 +30,7 @@
   <3 traits model>
 
   - To get variance components (-out) and breeding values (-bv),
-  ./mtg1.2-f95 -p toy.fam -d toy.phen -g toy.rtmx -out toy.3t.ascm -mod 3 -bv toy.3t.bv -cove 1
+  ./mtg1.3 -p toy.fam -d toy.phen -g toy.rtmx -out toy.3t.ascm -mod 3 -bv toy.3t.bv -cove 1
 
   - To get SNP BLUP for the first trait,
   awk '$1==1 {print $2}' toy.3t.bv.py > tmp1
@@ -49,11 +48,11 @@
 
 
   <with binary GRM>
-  ./mtg-f95 -p toy.fam -d toy.phen -g toy.rtmx -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1 (with text GRM file)
-  ./mtg-f95 -p toy.fam -d toy.phen -bg toy.grm.bin -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1 (with binary GRM file (GCTA format))
+  ./mtg1.3 -p toy.fam -d toy.phen -g toy.rtmx -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1 (with text GRM file)
+  ./mtg1.3 -p toy.fam -d toy.phen -bg toy.grm.bin -out toy.2t.ascm -mod 2 -bv toy.2t.bv -cove 1 (with binary GRM file (GCTA format))
 
 
 
-  Please see more detail in manual20150129.docx
+  Please see more detail in manual20150602.docx
 
 
