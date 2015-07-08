@@ -3,6 +3,10 @@
   version1.3
   SH Lee (Jul/2014)
 
+  Citation:
+  Maier, R., et al. Joint analysis of psychiatric disorders increases accuracy of risk prediction for schizophrenia, bipolar disorder and major depression disorder. The American Journal of Human Genetics 96, 283-294 (2015)
+
+
   mtg1.3     : compiled with intel ifort (possible to parallel e.g. -thread k)
   rtmx_frq-vx: estimating mean(x) and var(x) (x is 0,1,2 SNP coefficient)
   snp_blup1.5: converting individual BLUP to SNP BLUP or the otherway around
@@ -53,6 +57,6 @@
 
 
 
-  Please see more detail in manual20150602.docx
+  Please see more detail in manual20150708.docx
 
 
